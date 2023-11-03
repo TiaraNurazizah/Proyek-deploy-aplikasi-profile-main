@@ -1,15 +1,12 @@
-runtime: python39
-instance_class: F1
+runtime: python27
+api_version: 1
+threadsafe: true
 
 handlers:
-- url: /css
-  static_dir: myportofolio/css
+- url: /
+  static_files: myportofolio/index.html
+  upload: myportofolio/index.html
 
-- url: /image
-  static_dir: myportofolio/image
-
-- url: /js
-  static_dir: myportofolio/js
-
-- url: /.*
-  script: auto
+- url: /(.*)
+  static_files: myportofolio/\1
+  upload: myportofolio/(.*)
