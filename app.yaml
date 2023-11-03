@@ -1,0 +1,15 @@
+runtime: python39
+instance_class: F1
+
+handlers:
+- url: /css
+  static_dir: myportofolio/css
+
+- url: /image
+  static_dir: myportofolio/image
+
+- url: /js
+  static_dir: myportofolio/js
+
+- url: /.*
+  script: auto
